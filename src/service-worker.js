@@ -45,3 +45,15 @@ chrome.webNavigation.onHistoryStateUpdated.addListener(function (details) {
     }
   }
 });
+
+chrome.runtime.onMessageExternal.addListener(function (
+  request,
+  sender,
+  sendResponse
+) {
+  if (request?.command === "get_settings") {
+    return sendResponse({
+      enabled: true,
+    });
+  }
+});

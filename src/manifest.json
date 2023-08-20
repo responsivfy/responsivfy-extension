@@ -25,6 +25,13 @@
   },
   "permissions": ["declarativeNetRequest", "webNavigation"],
   "host_permissions": ["<all_urls>"],
+  "externally_connectable": {
+    "matches": [
+      "*://localhost/*",
+      "*://responsivfy.com/*",
+      "*://*.responsivfy.com/*"
+    ]
+  },
   "declarative_net_request": {
     "rule_resources": [
       {
